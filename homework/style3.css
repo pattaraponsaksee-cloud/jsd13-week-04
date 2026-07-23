@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #f1f5f9; /* สีพื้นหลังของหน้าเว็บ */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* จัดการ์ดให้อยู่กึ่งกลางแนวนอน */
+  align-items: center;    /* จัดการ์ดให้อยู่กึ่งกลางแนวตั้ง */
+  padding: 24px;
+}
+
+
+.card-container {
+  display: flex;
+  flex-direction: row; /* เรียงกล่องลูกเป็นแนวนอน (df: row) */
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 28px;
+  max-width: 900px;
+  width: 100%;
+  gap: 32px; /* ระยะห่างระหว่างกล่องรูปภาพและกล่องเนื้อหา */
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
+  align-items: center;
+}
+
+
+.image-box {
+  position: relative; /* ใช้เป็นจุดอ้างอิงตำแหน่งสำหรับฉากหลังสีน้ำเงิน */
+  flex: 1; /* แบ่งพื้นที่เท่าๆ กันกับฝั่งขวา */
+  width: 100%;
+}
+
+
+.accent-bg {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: -10px;
+  bottom: -10px;
+  background-color: #0060ad;
+  border-radius: 20px;
+}
+
+
+.card-img {
+  position: relative;
+  z-index: 2; /* ดันรูปภาพให้อยู่ด้านบนฉากหลังสีน้ำเงิน */
+  width: 100%;
+  height: 340px;
+  object-fit: cover; /* ครอบรูปภาพให้พอดีกรอบไม่เบี้ยว */
+  border-radius: 20px;
+  display: block;
+}
+
+
+.content-box {
+  display: flex;
+  flex-direction: column; /* เรียงองค์ประกอบจากบนลงล่างเป็นแนวตั้ง (df: column) */
+  flex: 1; /* แบ่งพื้นที่เท่าๆ กันกับฝั่งซ้าย */
+  justify-content: space-between; /* กระจายระยะห่างระหว่างองค์ประกอบให้พอดี */
+  gap: 20px;
+}
+
+
+.card-title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+
+.card-description {
+  font-size: 0.92rem;
+  color: #475569;
+  line-height: 1.65;
+}
+
+
+.button-wrapper {
+  display: flex;
+}
+
+.learn-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #9cd3f7; /* สีพื้นหลังของปุ่ม */
+  color: #0f172a;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 50px; /* ทำมุมปุ่มให้เป็นทรงมนกลม */
+  border: 1px solid #0f172a; /* เส้นขอบสีดำเข้ม */
+  box-shadow: 2px 2px 0px #0f172a; /* เงาสไตล์มินิมอลแบบแข็ง */
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+
+.learn-btn:hover {
+  background-color: #83c6f4;
+  transform: translateY(-1px);
+  box-shadow: 3px 3px 0px #0f172a;
+}
+
+
+.arrow-icon {
+  width: 16px;
+  height: 16px;
+}
